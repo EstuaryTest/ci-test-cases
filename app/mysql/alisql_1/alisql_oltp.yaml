@@ -1,0 +1,31 @@
+metadata:
+    name: alisql_oltp_testing
+    format: "Lava-Test-Shell Test Definition 1.0"
+    description: "alisql oltp testing"
+    maintainer:
+        - tanliqing2010@163.com
+    scope:
+        - functional
+    os:
+        - ubuntu
+          # - opensuse
+        - centos
+
+    devices:
+        - d02
+        - d03
+        - d01
+#install:
+#   deps:
+#       -
+#       -
+#        - 
+
+run:
+    steps:
+        - "cd app/mysql/alisql_1"
+        - "./run_server.sh 127.0.0.1"
+        - "./run_client.sh 127.0.0.1"
+        - "./run_test.sh 127.0.0.1"
+        - "cd -"
+
