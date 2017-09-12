@@ -11,4 +11,4 @@ ip=${1}
 ./setup.sh client
 
 #Start to initialize 200 mysql instances
-./scripts/init_client.sh ${ip} init 200
+./scripts/init_client.sh ${ip} init 6
